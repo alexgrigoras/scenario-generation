@@ -13,6 +13,7 @@ aiosignal=1.2.0=pyhd3eb1b0_0
 alabaster=0.7.12=pyhd3eb1b0_0
 altair=5.0.1=py310hca03da5_0
 anaconda=custom=py310_2
+annotated-types=0.7.0=pypi_0
 antropy=0.1.6=pypi_0
 anyio=4.2.0=py310hca03da5_0
 aom=3.6.0=h313beb8_0
@@ -160,12 +161,15 @@ grpcio=1.62.0=pypi_0
 gst-plugins-base=1.22.3=h514c7bf_0
 gstreamer=1.22.3=h80987f9_0
 gtest=1.14.0=h48ca7d4_0
+h11=0.14.0=pypi_0
 h5py=3.9.0=py310haafd478_0
 hdf5=1.12.1=h05c076b_3
 heapdict=1.0.1=pyhd3eb1b0_0
 holidays=0.60=pypi_0
 holoviews=1.18.3=py310hca03da5_0
 html5lib=1.1=pypi_0
+httpcore=1.0.7=pypi_0
+httpx=0.28.1=pypi_0
 huggingface-hub=0.22.2=pypi_0
 hvplot=0.9.2=py310hca03da5_0
 hyperlink=21.0.0=pyhd3eb1b0_0
@@ -318,6 +322,7 @@ nbformat=5.9.2=py310hca03da5_0
 ncurses=6.4=h313beb8_0
 nest-asyncio=1.6.0=py310hca03da5_0
 networkx=3.1=py310hca03da5_0
+nixtla=0.6.6=pypi_0
 nltk=3.8.1=py310hca03da5_0
 notebook=7.0.8=py310hca03da5_0
 notebook-shim=0.2.3=py310hca03da5_0
@@ -336,6 +341,7 @@ openssl=3.0.13=h1a28f6b_0
 opt_einsum=3.3.0=pyhd3eb1b0_1
 orc=1.8.2=hef0d403_2
 ordered-set=4.1.0=pypi_0
+orjson=3.10.15=pypi_0
 overrides=7.4.0=py310hca03da5_0
 packaging=23.1=py310hca03da5_0
 pandas=2.0.3=py310h46d7db6_0
@@ -379,6 +385,8 @@ pycoingecko=3.1.0=pypi_0
 pycparser=2.21=pyhd3eb1b0_0
 pyct=0.5.0=py310hca03da5_0
 pycurl=7.45.2=py310h02f6b3c_1
+pydantic=2.10.6=pypi_0
+pydantic-core=2.27.2=pypi_0
 pydeck=0.8.0=py310hca03da5_2
 pydispatcher=2.0.5=py310hca03da5_2
 pydocstyle=6.3.0=py310hca03da5_0
@@ -509,7 +517,7 @@ tensorflow-estimator=2.8.0=pypi_0
 tensorflow-io-gcs-filesystem=0.36.0=pypi_0
 tensorflow-metadata=1.14.0=pypi_0
 tensorflow-privacy=0.7.3=pypi_0
-tensorflow-probability=0.23.0=pypi_0
+tensorflow-probability=0.16.0=pypi_0
 termcolor=2.4.0=pypi_0
 terminado=0.17.1=py310hca03da5_0
 text-unidecode=1.3=pyhd3eb1b0_0
@@ -537,8 +545,7 @@ transformers=4.39.3=pypi_0
 tsgm=0.0.4=pypi_0
 twisted=23.10.0=py310hca03da5_0
 typeguard=3.0.2=py310hca03da5_0
-typing-extensions=4.9.0=py310hca03da5_1
-typing_extensions=4.9.0=py310hca03da5_1
+typing-extensions=4.11.0=pypi_0
 tzdata=2023d=h04d1e81_0
 tzlocal=2.1=py310hca03da5_1
 uc-micro-py=1.0.1=py310hca03da5_0
@@ -547,6 +554,7 @@ unidecode=1.2.0=pyhd3eb1b0_0
 unixodbc=2.3.11=h1a28f6b_0
 urllib3=2.0.7=py310hca03da5_0
 utf8proc=2.6.1=h80987f9_1
+utilsforecast=0.2.11=pypi_0
 validators=0.18.2=pyhd3eb1b0_0
 w3lib=2.1.2=py310hca03da5_0
 watchdog=2.1.6=py310h1a28f6b_0
@@ -578,4 +586,5 @@ zlib=1.2.13=h53f4e23_5
 zlib-ng=2.0.7=h80987f9_0
 zope=1.0=py310hca03da5_1
 zope.interface=5.4.0=py310h1a28f6b_0
+zstandard=0.23.0=pypi_0
 zstd=1.5.5=hd90d995_0
