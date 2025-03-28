@@ -2,9 +2,11 @@
 
 >The implementation of the TBWISA framework from [Decision intelligence system for generating scenario outcomes using machine learning methods]()
 
+*TODO: decide if the article should be generalized for generating what-if scenarios or specialised for promotion forecasting*
+
 ## 1. INTRODUCTION
 
-What-if analysis is a technique for creating simulations that are used by business executives to evaluate the behavior of complex systems under some assumptions. It plays an important role for decision-making in business strategy, financial planning, logistics, and environmental management. Simulating alternative futures helps decision-makers to assess potential risks, forecast outcomes, and make informed choices under uncertainty.
+What-if analysis is a technique for creating simulations that are used by business executives to evaluate the behavior of complex systems under some assumptions. It plays an important role for decision-making in business strategy, financial planning, logistics, and environmental management. Simulating alternative futures helps decision-makers to determine potential risks, forecast outcomes, and make informed choices under uncertainty.
 [[Designing what-if analysis: Towards a methodology](https://dl.acm.org/doi/10.1145/1183512.1183523)]
 
 There are different types of scenarios planning, normative vs exploratory approaches and intuitive versus formalized methods for scenarion planning. Scenario planning is most effective when it facilitates strategic thinking, improves organizational learning, and supports decision-making under uncertainty. There are some limitations, such as lack of empirical validation and inconsistent application across studies, stating the need for more rigorous frameworks and outcome-focused evaluation in scenario planning practices [[Types of scenario planning and their effectiveness: A review of reviews](https://www.sciencedirect.com/science/article/pii/S0016328723000575)].
@@ -16,13 +18,13 @@ The main contribution of this work is defining a framework based on transformers
 ## 2. RELATED WORK
 
 Generating what-if scenarios is applied in different industries and is researched in businesses and academia. This section reviews the related work in the area of scenario analysis. Traditional methods have been used by different researchers are time-series decomposition, sensitivity analysis, and regression models:
-- Giorgini et al. used the conceptual foundation of what-if analysis as a simulation-based approach for exploring hypothetical situations, proposing a structured methodology to support scenario-based decision-making processes [[Designing What-If Analysis: Towards a Methodology](https://dl.acm.org/doi/10.1145/1183512.1183523)];
+- Giorgini et al. used the foundation of what-if analysis as a simulation-based approach for exploring hypothetical situations, proposing a structured methodology to support scenario-based decision-making processes [[Designing What-If Analysis: Towards a Methodology](https://dl.acm.org/doi/10.1145/1183512.1183523)];
 - Bolis and Castelletti conducted a comprehensive review of scenario analysis in engineering and environmental systems, highlighting the techniques used and the challenges in managing uncertainty in such applications [[Scenario analysis: a review of methods and applications for engineering and environmental systems](https://link.springer.com/article/10.1007/s10669-013-9437-6)];
 - Wright et al. extended this view with a meta-review, categorizing various scenario planning approaches and evaluating their strategic impact [[Types of scenario planning and their effectiveness: A review of reviews](https://www.sciencedirect.com/science/article/pii/S0016328723000575)].
 
 Machine learning methods increase forecasting accuracy and have been used in scenario generation frameworks:
 - Politikos et al. (2024) used XGBoost models to develop a what-if scenario tool for predicting the ecological status of rivers under altered environmental inputs. The tool combines data transformation, machine learning forecasting, and model interpretability using SHAP values [[Predicting the Ecological Quality of Rivers: A Machine Learning Approach and a What‑if Scenarios Tool](https://link.springer.com/article/10.1007/s10666-024-09980-y)];
-- Junike et al. (2023) focused on validating machine learning-based scenario generators, especially in economic modeling, where robustness and generalizability are critical [[Validation of Machine Learning Based Scenario Generators](https://link.springer.com/article/10.1007/s10203-023-00412-1)];
+- Junike et al. (2023) focused on validating machine learning-based scenario generators, especially in economic modeling, where robustness and generalizability have a significant impact [[Validation of Machine Learning Based Scenario Generators](https://link.springer.com/article/10.1007/s10203-023-00412-1)];
 - Nápoles et al. introduced FCM Expert, a software tool that facilitates scenario analysis and pattern classification using expert-designed FCMs optimized via machine learning algorithms. Fuzzy cognitive maps (FCMs) are as a flexible modeling technique used for scenario simulation [[FCM Expert: Software Tool for Scenario Analysis and Pattern Classification Based on Fuzzy Cognitive Maps](https://www.researchgate.net/publication/328218204)];
 - Liebig and Käfer (2017) proposed a framework for generating what-if scenarios directly from time series data. The system allows users to define alternative futures interactively by modifying descriptive features of the time series, enabling quick feedback and exploration of potential developments [[Generating What-If Scenarios for Time Series Data. In Proceedings of the 23rd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining](https://dl.acm.org/doi/10.1145/3085504.3085507)].
 
@@ -30,7 +32,11 @@ What-if scenarios can be used in promotion forecasting in the retail domain:
 - Henzel and Sikora (2022) applied gradient boosting to forecast performance indicators that measure promotion efficiency in FMCG retail, providing insights for optimizing marketing strategies [[Gradient Boosting Application in Forecasting of Performance Indicators Values for Measuring the Efficiency of Promotions in FMCG Retail](https://link.springer.com/article/10.1007/s10100-022-00817-7)];
 - Shen et al. (2021) proposed a scalable ML-driven framework to personalize promotional incentives based on customers’ predicted responses, aligning business objectives with user-specific engagement strategies [[A Framework for Massive Scale Personalized Promotion](https://arxiv.org/abs/2101.05491)].
 
+*TODO: research promotion forecasting articles*
+
 ## 3. PROPOSED MODEL
+
+A *transformers-based what-if scenario analysis* (TBWISA) framework is proposed. The workflow of the proposed framework contains multiple steps: data collection for gathering the required data from multiple sources and cleaning it, data augmentation for generating synthetic data for incomplete datasets, scenario generation which selects the scenarios that are explored, forecasting for generating future values in the current time series and outcome generation for determining the outcomes for the created scenarios.
 
 ![TBWISA framework diagram](/images/tbwisa_framework.png)
 
@@ -38,11 +44,13 @@ What-if scenarios can be used in promotion forecasting in the retail domain:
 Historical and contextual e-commerce data, including price, promotions, and seasonal effects, are collected and augmented to enhance model training and forecasting accuracy. The following steps are performed:
 
 - **Data Collection:** Gathering relevant historical data from e-commerce operations and external variables impacting demand, such as pricing, promotions, or seasonal effects;
-- **Data Augmentation:** Applying data enhancement techniques to improve forecasting accuracy;
+- ***Data Augmentation:** Applying data enhancement techniques to improve forecasting accuracy;*
+    
+    *TODO: add data augmentation or remove if not necessary!?*
 
 ### 3.2. Transformer Forecasting Model
 
-Transformers were introduced by Vaswani et al. (2017) [[Attention Is All You Need](https://arxiv.org/abs/1706.03762)] for natural language processing tasks and offered improved results in modeling complex dependencies within sequential data. The self-attention mechanism allows the dynamic modeling of interactions among elements in a sequence, making it particularly suitable for time series forecasting, where capturing temporal relationships is important.
+Transformers were introduced for natural language processing tasks and offered improved results in modeling complex dependencies within sequential data [[Attention Is All You Need](https://arxiv.org/abs/1706.03762)]. The self-attention mechanism allows the dynamic modeling of interactions among elements in a sequence, making it particularly suitable for time series forecasting, where capturing temporal relationships is important.
 
 Unlike traditional sequence-to-sequence Transformers, which contain both encoder and decoder layers, the model used for time series forecasting uses an **encoder-only architecture**. This model captures internal temporal dependencies directly from historical data, without the complexity introduced by decoder layers. It is composed by the following components:
 
@@ -76,18 +84,22 @@ The encoder-only transformer offers benefits over traditional forecasting method
 Adaptive Representations: Dynamically adjusts attention to capture relevant temporal contexts effectively.
 
 ### 3.3. Scenario Generation
-Scenarios are systematically developed by defining dependent variables, initial assumptions, and analyzing variable correlations. Time series transformations ensure that simulations accurately reflect realistic market scenarios and conditions. 
+Scenarios are systematically developed by defining dependent variables, initial assumptions, and analyzing variable correlations. Time series transformations ensure that simulations accurately reflect realistic market scenarios and conditions.
 
 The scenario generation starts with historical data analysis to estimate the price elasticity of demand. This elasticity estimation feeds into a non-linear adjustment component to simulate consumer the behavior changes in response to significant price variations. A structural causal model is integrated to determine the cause-effect relationships between variables. The last part is the stochastic adjustment module, which introduces controlled randomness to replicate market uncertainties, increasing scenario realism in uncertain market conditions.
 
+*TODO:*
+- *handle **cannibalisation** in promotion planning or generating scenarios*
+- *using causation of variables, not correlation*
+
 The components of the architecture are shown below:
 
-#### 3.3.1 Structural Causal Modeling
+#### 3.3.1 Structural Causal Model
 
 The causal impact of price on demand is determined by applying the *structural causal model* [[The book of why](https://dl.acm.org/doi/10.5555/3238230)]. The causal relationships are defined as follows:
 
-- *Price ($P$)* affects *Demand ($D$)*.
-- *Demand ($D$)* influences *Sales ($S$)*.
+- *Price ($P$)* affects *Demand ($D$)*;
+- *Demand ($D$)* influences *Sales ($S$)* (revenue);
 - Unobserved external factors (e.g., seasonality, brand perception) are captured in $U_D$ and $U_S$.
 
 The structural equations are:
@@ -109,13 +121,18 @@ $$
 
 The method allows the simulation of realistic scenarios where price interventions are treated as deliberate actions rather than passive observations.
 
-#### 3.3.2. Price Elasticity Estimation
+[[Basic Econometrics](https://www.scirp.org/reference/referencespapers?referenceid=1568730)]:
 
-Price elasticity $`E`$ measures the responsiveness of demand to price changes. It is estimated using a log-log linear regression model [[Basic Econometrics](https://www.scirp.org/reference/referencespapers?referenceid=1568730)]:
+To generate scenarios reflecting deliberate price interventions, the counterfactual demand $D_{cf}$ is calculated by modifying the original structural elasticity equation with adjusted prices and residuals:
 
 $$
-\log(\text{Demand}) = a + E \cdot \log(\text{Price}) + \epsilon
+D_{cf} = \exp\left(\alpha + E_{adjusted}\cdot\log(P_{cf}) + U_D\right)
 $$
+
+where:
+- $P_{cf}$ is the counterfactual (adjusted) price after the intervention;
+- $E_{adjusted}$ is the elasticity adjusted for non-linear consumer reactions;
+- $U_D$ are the residuals from the initial estimation.
 
 #### 3.3.3. Non-linear Elasticity Adjustment
 
@@ -125,18 +142,26 @@ $$
 E_{adjusted} = E \cdot \left(1 + 0.5 \cdot (\Delta P)^2\right)
 $$
 
+where $\Delta P$ represents the relative price change.
+
 #### 3.3.4. Stochastic Demand Adjustment
 
 Stochastic variations are introduced as:
 
 $$
-\text{Demand}_{stochastic} = \text{Demand}_{forecasted} \cdot (1 + \text{Randomness})
+\text{D}_{stochastic} = \text{D}_{forecasted} \cdot (1 + \text{Randomness})
 $$
 
 where randomness is sampled from a normal distribution with defined bounds [[Forecasting: methods and applications](https://robjhyndman.com/forecasting/)].
 
 ### 3.4. Optimal Profit Window Model
 An optimization approach to identify the optimal profit window from the generated scenarios is used. The goal is to select a continuos time window that maximizes profit while penalizing long windows (from revenue), considering external factors (demand).
+
+The steps for each scenario are as follows:
+1. Evaluate candidate windows;
+2. Compute generalized penalized scores;
+3. Select the highest scoring window;
+4. Identify overall best scenario-window combination.
 
 $R = \{r_1, r_2, \dots, r_T\}$ represent a forecasted revenue time series, and $D = \{d_1, d_2, \dots, d_T\}$ represent an external factor time series, such as demand or risk. A window $W(i, \ell)$ is defined as:
 
@@ -163,12 +188,6 @@ $$
 $$
 
 where $(i^*, \ell^*)$ represent the optimal starting index and length of the profit window. This search uses techniques from dynamic programming and penalized optimization [[Dynamic Programming and Optimal Control](http://athenasc.com/dpbook.html)][[Using penalized contrasts for change-point](https://www.sciencedirect.com/science/article/abs/pii/S0165168405000381)].
-
-The steps for each scenario are as follows:
-1. Evaluate candidate windows;
-2. Compute generalized penalized scores;
-3. Select the highest scoring window;
-4. Identify overall best scenario-window combination.
 
 ## 4. EXPERIEMENTS
 
@@ -213,6 +232,10 @@ The effectiveness of scenarios is validated using multiple metrics across econom
 - revenue time series
 - total revenue
 - optimal profit window
+
+Optimal Profit window:
+
+![Optimal profit window image](images/optimal_window.png)
 
 Revenue Metrics:
 
