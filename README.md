@@ -121,8 +121,6 @@ $$
 
 The method allows the simulation of realistic scenarios where price interventions are treated as deliberate actions rather than passive observations.
 
-[[Basic Econometrics](https://www.scirp.org/reference/referencespapers?referenceid=1568730)]:
-
 To generate scenarios reflecting deliberate price interventions, the counterfactual demand $D_{cf}$ is calculated by modifying the original structural elasticity equation with adjusted prices and residuals:
 
 $$
@@ -136,7 +134,8 @@ where:
 
 #### 3.3.3. Non-linear Elasticity Adjustment
 
-This module adjusts the elasticity to reflect stronger consumer responses to large price changes:
+This module adjusts the elasticity to reflect stronger consumer responses to large price changes 
+[[Basic Econometrics](https://www.scirp.org/reference/referencespapers?referenceid=1568730)]:
 
 $$
 E_{adjusted} = E \cdot \left(1 + 0.5 \cdot (\Delta P)^2\right)
