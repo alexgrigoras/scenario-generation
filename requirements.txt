@@ -1,7 +1,6 @@
 ipykernel
 pandas
 matplotlib
-nixtla
 scikit-learn
 tensorflow
 seaborn
