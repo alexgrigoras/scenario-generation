@@ -69,12 +69,19 @@ This implementation corresponds to the IEEE conference paper:
 The repository includes reference images under `images/`:
 
 * Framework overview:
+
 ![TBWISA Framework](images/tbwisa_framework.png)
+
 * Scenario examples:
+
 ![Scenarios](images/scenarios.png)
+
 * Revenue comparison:
+
 ![Total Revenue](images/total_revenue.png)
-* Optimal window: `images/optimal_window.png`
+
+* Optimal window:
+
 ![Optimal Window](images/optimal_window.png)
 
 
